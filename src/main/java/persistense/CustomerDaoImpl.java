@@ -19,6 +19,7 @@ public class CustomerDaoImpl implements CustomerDAO {
             statement.setString(1, customer.plate());
             statement.setString(2, customer.phone());
             statement.setString(3, customer.type());
+            statement.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
